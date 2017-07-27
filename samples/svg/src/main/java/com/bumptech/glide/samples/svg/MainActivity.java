@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
 
   private ImageView imageViewRes;
   private ImageView imageViewNet;
+  private ImageView imageViewNet2;
   private RequestBuilder<PictureDrawable> requestBuilder;
 
   @Override
@@ -32,6 +33,9 @@ public class MainActivity extends Activity {
 
     imageViewRes = (ImageView) findViewById(R.id.svg_image_view1);
     imageViewNet = (ImageView) findViewById(R.id.svg_image_view2);
+    imageViewNet2 = (ImageView) findViewById(R.id.svg_image_view2);
+
+    imageViewNet2.setImageResource(R.drawable.image_error);
 
     requestBuilder = GlideApp.with(this)
         .as(PictureDrawable.class)
